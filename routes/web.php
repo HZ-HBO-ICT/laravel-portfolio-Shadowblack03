@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+
+use App\Http\Controllers\ProfileController;
+
 use App\Http\Controllers\TestController;
 
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\WelcomeController;
+
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +25,8 @@ use App\Http\Controllers\WelcomeController;
 
 Route::get('/tests/{test}', [TestController::class, 'show']);
 
-Route:: get('/', [WelcomeController::Class, 'show']);
+Route:: get('welcome', [WelcomeController::Class, 'show']);
+
+Route:: get('profile', [ProfileController::Class, 'show']);
+
+Route:: get('dashboard', [DashboardController::Class, 'show']);

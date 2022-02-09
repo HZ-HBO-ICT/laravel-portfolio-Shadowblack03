@@ -116,9 +116,9 @@
 </article>
 <nav>
     <ul class="sticky bg-black">
-        <li> <a href="index.html">home</a></li>
-        <li> <a href="profile.html">profile</a> </li>
-        <li><a href="dashboard.html">dashboard</a></li>
+        <li> <a href="home">home</a></li>
+        <li> <a href="profile">profile</a> </li>
+        <li><a href="dashboard">dashboard</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="blog.html">blog</a></li>
     </ul>
