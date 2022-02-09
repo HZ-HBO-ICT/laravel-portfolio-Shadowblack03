@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+
 use App\Http\Controllers\DashboardController;
+
+use App\Http\Controllers\FaqController;
 
 use App\Http\Controllers\ProfileController;
 
@@ -30,3 +34,7 @@ Route:: get('welcome', [WelcomeController::Class, 'show']);
 Route:: get('profile', [ProfileController::Class, 'show']);
 
 Route:: get('dashboard', [DashboardController::Class, 'show']);
+
+Route:: get('faq', [FaqController::Class, 'show']);
+
+Route:: get('blog', [BlogController::Class, 'show']);
