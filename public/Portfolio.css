@@ -1,0 +1,43 @@
+
+/* text size */
+.h1 {
+    font-size: 25px;
+}
+/* foto box */
+.card-img-top {
+    height: 200px;
+}
+/* navbar style */
+ul.bg-black {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+ul.bg-black>li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(131, 131, 131);
+}
+/* navbar place */
+.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+}
+nav {
+    padding-bottom: 60px;
+}
