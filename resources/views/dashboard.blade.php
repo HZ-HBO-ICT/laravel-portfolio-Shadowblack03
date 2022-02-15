@@ -1,43 +1,8 @@
+@extends ('layout')
 <!DOCTYPE html>
 <style>
     .h1 {
         font-size: 10px;
-    }
-
-
-    ul.bg-black {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: rgba(0, 0, 0, 0.836);
-    }
-
-    ul.bg-black>li {
-        float: left;
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: rgb(131, 131, 131);
-    }
-
-    .sticky {
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        left: 0px;
-    }
-
-    .main {
-        padding-top: 50px;
     }
 
     table {
@@ -65,10 +30,10 @@
 
 <head>
     <title>Dashboard</title>
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="Portfolio.css">
 </head>
 
-<body>
+@section ('dashboard')
 
 <div class="container">
     <div class="progress">
@@ -77,17 +42,6 @@
             20%
         </div>
     </div>
-</div>
-<div>
-    <nav>
-        <ul class="sticky bg-black">
-            <li> <a href="home">home</a></li>
-            <li> <a href="profile">profile</a> </li>
-            <li><a href="dashboard">dashboard</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="blog.html">blog</a></li>
-        </ul>
-    </nav>
 </div>
 
 <main>
@@ -176,4 +130,4 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</body>
+@endsection

@@ -15,6 +15,6 @@
 <body>
 <h1>my blog post</h1>
 
-<p>{{$test}}</p>
+<p>{{$test->body}}</p>
 </body>
 </html>

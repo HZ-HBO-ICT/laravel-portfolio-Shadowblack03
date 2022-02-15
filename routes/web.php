@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/', [WelcomeController::class, 'show']);
 
-Route::get('/tests/{test}', [TestController::class, 'show']);
+Route:: get('/tests/{test}', [TestController::class, 'show']);
 
 Route:: get('welcome', [WelcomeController::Class, 'show']);
 
