@@ -12,6 +12,8 @@ use App\Http\Controllers\TestController;
 
 use App\Http\Controllers\WelcomeController;
 
+use App\Http\Controllers\ArticleController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,4 +39,10 @@ Route:: get('dashboard', [DashboardController::Class, 'show']);
 
 Route:: get('faq', [FaqController::Class, 'show']);
 
-Route:: get('blog', [BlogController::Class, 'show']);
+Route::get('blog', [BlogController::class, 'show']);
+
+Route::post('/articles', 'ArticlesController@store');
+
+Route::get('/articles/create', 'ArticleController@show');
+
+Route:: get('/articles/{article}', [ArticleController::Class, 'show']);

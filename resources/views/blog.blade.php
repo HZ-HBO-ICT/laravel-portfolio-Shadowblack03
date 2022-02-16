@@ -84,12 +84,12 @@
         <!-- First feedback blog post -->
         <div class="col-md-4">
             <div class="card bg-light mb-3">
-                <div class="card-header">feedback</div>
+                <div class="card-header">test plaats</div>
                 <img class="card-img-top" src="https://www.forwrd.nu/wp-content/uploads/2019/12/Feedback-1.jpg"
                      alt="Feedback">
                 <div class="card-body">
                     <p class="card-text">
-                        <a href="feedback.html" class="text-link-hover-black">See more...</a>
+                        <a href="/articles/1" class="text-link-hover-black">See more...</a>
                     </p>
                 </div>
             </div>

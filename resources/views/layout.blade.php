@@ -38,24 +38,26 @@
     }
 </style>
 <head>
-    <link rel="stylesheet" href="Portfolio.css">
+    <link rel="stylesheet" href="/Portfolio.css" type="text/css" media="all">
+    <script  src="JavaScript/Java.js"></script>
 </head>
 
 
 <body>
 <nav>
     <ul class="sticky bg-black">
-        <li> <a href="welcome">home</a></li>
-        <li> <a href="profile">profile</a> </li>
-        <li><a href="dashboard">dashboard</a></li>
-        <li><a href="faq">FAQ</a></li>
-        <li><a href="blog">blog</a></li>
+        <li> <a href="/welcome">home</a></li>
+        <li> <a href="/profile">profile</a> </li>
+        <li><a href="/dashboard">dashboard</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/blog">blog</a></li>
     </ul>
 </nav>
 @yield ('home')
 @yield('profile')
 @yield ('dashboard')
 @yield ('blog')
+@yield('show')
 </body>
 
 </html>
