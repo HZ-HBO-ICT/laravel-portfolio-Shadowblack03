@@ -11,11 +11,11 @@ class ArticleController extends Controller
     {
         $articles = Article::latest()->get();
 
-        return view('/blog', [articles => $articles]);
+        return view('/blog.index', [articles => $articles]);
     }
     public function show($id)
     {
-        $article = Article::find($id);
+        $article = Article::find(Article $article);
 
         return view('articles.show', ['article' => $article]);
     }
@@ -25,8 +25,54 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
-     public function store ()
+     public function store(Request $request)
      {
-         die('hello');
+         Article::create($this->validateArticle($request));
+
+         return redirect(route('articles.index'))   ;
      }
+
+     public function edit($id)
+{
+    return view('article.edit', ['article' => $article]);
+}
+
+public function update(Request $request, Article $article)
+    {
+        $article->update($this->validateArticel($request));
+
+        return redirect(route('article.show', $article));
+    }
+
+    public function destroy(Request $request)
+{
+    $article->delete();
+    return redirect(route('article.index'));
+}
+
+public function validateArticle(Request $request)
+    {
+        return $request->validate([
+            'name' => 'required',
+            'occupation' => 'required',
+            'job_description' => ''
+        ]);
+    }
+
+//    public function store()
+//    {
+//        Request()->validate([
+//            'title' => 'required',
+//            'excerpt' => 'required',
+//            'body' => 'required'
+//        ]);
+//        $articles = Article::find(Article $id);
+//    $articles->title = request('title');
+//    $articles->excerpt = request('excerpt');
+//    $articles->body = request('body');
+//    $articles->save();
+//    }
+
+
+    return direct('/articles/' . $article->id);
 }

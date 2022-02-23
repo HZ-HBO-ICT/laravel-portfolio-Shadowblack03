@@ -31,18 +31,40 @@ use Illuminate\Support\Facades\Route;
 
 Route:: get('/tests/{test}', [TestController::class, 'show']);
 
-Route:: get('welcome', [WelcomeController::Class, 'show']);
+Route:: get('/welcome', [WelcomeController::Class, 'show']);
 
-Route:: get('profile', [ProfileController::Class, 'show']);
+Route:: get('/profile', [ProfileController::Class, 'show']);
 
-Route:: get('dashboard', [DashboardController::Class, 'show']);
+Route:: get('/dashboard', [DashboardController::Class, 'show']);
 
-Route:: get('faq', [FaqController::Class, 'show']);
+Route:: get('/faq', [FaqController::Class, 'show']);
+
+Route:: get('/faq', [FaqController::Class, 'index']);
+
+Route:: post('/faq/store', [FaqController::Class, 'store']);
+
+Route:: get('/faq/edit', [FaqController::Class, 'edit']);
+
+Route:: post('/faq/update', [FaqController::Class, 'update']);
+
+Route:: get('/faq/destroy', [FaqController::Class, 'destroy']);
+
+Route:: get('/faq/create', [FaqController::Class, 'create']);
 
 Route::get('blog', [BlogController::class, 'show']);
 
-Route::post('/articles', 'ArticlesController@store');
+//Route::post('/articles', [ArticleController::class,'index']);
+//
+//Route::post('/articles/store', [ArticleController::class,'store']);
+//
+//Route::get('/articles/create', [ArticleController::class,'create']);
+//
+//Route:: get('/articles/{article}', [ArticleController::Class, 'show']);
+//
+//Route:: get('/articles/{article}/edit', [ArticleController::Class, 'edit']);
+//
+//Route:: post('/articles/{article}/update', [ArticleController::Class, 'update']);
+//
+//Route:: get('/articles/{article}/destroy', [ArticleController::Class, 'destroy']);
 
-Route::get('/articles/create', 'ArticleController@show');
-
-Route:: get('/articles/{article}', [ArticleController::Class, 'show']);
+Route:: resource('/articles', [ArticleController::Class]);

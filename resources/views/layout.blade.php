@@ -58,6 +58,7 @@
 @yield ('dashboard')
 @yield ('blog')
 @yield('show')
+@yield('create')
 </body>
 
 </html>
